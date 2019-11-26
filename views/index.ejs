@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <%- include('import'); -%>
+    
+    <!--<link rel="icon" type="image/x-icon" href="/images/favicon.jpg">-->
+</head>
+
+<body>
+
+    <%- include('navbar'); -%>
+
+        <%- include('banner'); -%>
+
+        <div class="just-here">
+            <div class="container">
+              <div class="row">
+                <% sensors.forEach((sensor) => { %>
+                <%- include('sensor_card', { sensor: sensor }); -%>
+                <% }); %>
+              </div>
+            </div>
+          </div>
+          <div class="just-here">
+            <div class="container">
+              <div class="row">
+                <% actuadors.forEach((actuador) => { %>
+                <%- include('actuador_card', { actuador: actuador }); -%>
+                <% }); %>
+              </div>
+            </div>
+          </div>
+</body>
+
+</html>

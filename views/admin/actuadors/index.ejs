@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Atuadores</title>
+
+    <%- include('../../import'); -%>
+</head>
+
+<body>
+    <%- include('../../navbar'); -%>
+
+        <div class="container">
+            <div class="row">
+                <h2>Gerenciamento de dispositivos atuadores</2>
+            </div>
+
+            <div class="row mb-2">
+                <a href="/admin/actuadors/create" class="btn btn-success">NOVO DISPOSITIVO</a>
+            </div>
+
+            <div class="row">
+
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">Código</th>
+                            <th scope="col">Atuador</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% actuadors.forEach((actuadors) => { %>
+                            <tr>
+                                <td>
+                                    <%= actuadors.id %>
+                                </td>
+                                <td>
+                                    <%= actuadors.name %>
+                                </td>
+                            </tr>
+                            <%}); %>
+
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+
+</body>
+
+</html>

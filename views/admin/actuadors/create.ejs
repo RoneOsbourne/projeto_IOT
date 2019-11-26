@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Atuadores</title>
+    <%- include('../../import'); -%>
+</head>
+
+<body>
+    <%- include('../../navbar'); -%>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Novo Atuador</h1>
+            </div>
+        </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <form action="create" method="POST" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label for="actuadorCode">Nome do Dispositivo</label>
+                            <input name="name" type="text" class="form-control" id="actuadorName" placeholder="Nome do dispositivo que será controlado">
+                        </div>
+                        <div class="form-group">
+                            <label for="actuadorStatus">Status do Dispositivo</label>
+                            <input name="status" type="hidden" class="form-control" id="actuadorStatus" placeholder="Status do dispositivo" value="0">
+                        </div>
+                        <!--<input name="status" type="hidden" value="0">-->
+                        <button type="submit" class="btn btn-primary">Salvar</button>
+                    </form>
+                </div>
+            </div>
+    </div>
+</body>
+
+</html>

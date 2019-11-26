@@ -1,0 +1,32 @@
+<nav class="navbar navbar-light">
+    <a class="navbar-brand" href="/">HOME</a>
+    <!--<a class="navbar-brand" href="/cardsActuador">ATUADORES</a>
+    <a class="navbar-brand" href="/cardsSensors">SENSORES</a>
+    passar aqui o caminho de temperatura-->
+    <ul class="navbar-nav mr-auto">
+    <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle navbar-brand" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Administração</a>
+    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+        <a class="dropdown-item" href="/sensors">Leitura Dados Temperatura e Umidade</a>
+        <a class="dropdown-item" href="/admin/sensors">Sensores de Temperatura e Humidade</a>
+        <a class="dropdown-item" href="/admin/actuadors">Dispositivos de Acionamento</a>
+        <div class="dropdown-divider">Cadastros</div>
+        <a class="dropdown-item" href="/admin/sensors/create">Cadastro Sensores</a>
+        <a class="dropdown-item" href="/admin/actuadors/create">Cadastro Atuadores</a>
+    </div>
+    </li>
+    </ul>
+    <% if (locals.loggedUser) { %>
+        <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle  navbar-brand" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <%= locals.loggedUser.email %>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="/auth/logout">Sair</a>
+                </div>
+            </li>
+        </ul>
+        <% } %>
+
+</nav>

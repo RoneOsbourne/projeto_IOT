@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Sensores</title>
+  <%- include('import'); -%>
+</head>
+
+<body>
+  <%- include('navbar'); -%>
+  <div class="center">
+    <h1>Administração de Sensores</h1>
+  </div>
+  <div class="container">
+    <div class="row">
+    </div>
+    <div class="row mb-2">
+    </div>
+    <div class="row">
+      <% sensor.forEach((sensor) => { %>
+      <div class="sensor">
+        <h2 class="sensor-name">
+          <%= sensor.id %> - <%= sensor.name %>
+        </h2>
+        <br>
+        <% if (sensor.measurements.length > 0) { %>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Data</th>
+              <th>Temperatura</th>
+              <th>Umidade</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% sensor.measurements.forEach((measurement) => { %>
+            <tr>
+              <td><%= measurement.date %></td>
+              <td><%= measurement.temperature %></td>
+              <td><%= measurement.humidity %></td>
+            </tr>
+            <% }); %>
+          </tbody>
+        </table>
+        <% } else { %>
+        Nenhum valor existente para esse sensor
+        <% } %>
+      </div>
+      <% }); %>
+    </div>
+  </div>
+</body>
+
+</html>

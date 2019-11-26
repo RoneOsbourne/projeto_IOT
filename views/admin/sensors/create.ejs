@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sensores</title>
+    <%- include('../../import'); -%>
+</head>
+
+<body>
+    <%- include('../../navbar'); -%>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Novo dispositivo de medição</h1>
+            </div>
+        </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <form action="create" method="POST" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label for="sensorTitle">Local do Sensor</label>
+                            <input name="name" type="text" class="form-control" id="sensorName" placeholder="Local do dispositivo de medição">
+                        </div>
+                        <input name="date" type="hidden" value="01/11/2019">
+                        <input name="temperature" type="hidden" value="1">
+                        <input name="humidity" type="hidden" value="1">
+                    <button type="submit" class="btn btn-primary">Salvar</button>
+                    </form>
+                </div>
+            </div>
+    </div>
+</body>
+
+</html>

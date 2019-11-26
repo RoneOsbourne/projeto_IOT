@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Sensor</title>
+  <%- include('import'); -%>
+</head>
+
+<body>
+  <%- include('navbar'); -%>
+  <div class="container">
+    <div class="row">
+      <div class="post-detail">
+        <h1><%= sensor.nome %></h1>
+        <p><%= sensor.data %></p>
+        <p><%= sensor.valor %> </p>
+        <p><%= sensor.tipo %></p>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

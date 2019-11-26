@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        <%= title %>
+    </title>
+    <%- include('import'); -%>
+</head>
+
+<body>
+    <%- include('navbar'); -%>
+
+        <!-- o nome de origem desta pagina é index.ejs-->
+
+        <div class="container">
+            <div class="row">
+                <div class="dispositive-detail">
+                    <h1>
+                        <%= actuador.name %>
+                    </h1>
+                    <p>
+                        <%= actuador.status %>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>

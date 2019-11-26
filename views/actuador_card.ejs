@@ -1,0 +1,11 @@
+<div class="card" style="width: 19rem;">
+    <div class="card-body">
+        <h5 class="card-title">
+            <%= actuador.name %>
+        </h5>
+        <form action="create" method="POST">
+        <button value="<%= actuador.status %>" name="status" type="button; submit" class="btn btn-success">ON-OFF</button>
+        <input type="hidden" name="id" value="<%= actuador.id %>">
+        </form>
+    </div>
+</div>
